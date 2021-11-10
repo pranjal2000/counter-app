@@ -23,7 +23,7 @@ body {
   width: 12em;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  box-shadow: 0 0 0 2px brown;
+  box-shadow: 0 0 0 1.5px brown;
   border-radius: 10px;
 }
 
@@ -38,7 +38,7 @@ input {
   color: brown;
   font-size: 1.4em;
   font-weight: bold;
-  font-family: "Roboto";
+  font-family: "Open Sans";
   text-align: center;
   padding: 0;
 }
@@ -85,6 +85,7 @@ button {
 
 .loader h5 {
   font-weight: 600;
+  font-family: "Roboto";
 }
 
 .loader div {
@@ -118,15 +119,15 @@ button {
   flex-direction: column;
   justify-content: center;
   padding: 0;
-  width: 8em;
+  width: 10em;
 }
-
+.counterValue h5 {
+  margin: 20px 0 0 0;
+  font-weight: bold;
+  font-family: "Lato";
+}
 .counterValue p {
   margin: 5px 0 0 0;
   font-weight: 600;
   font-size: small;
-}
-.counterValue h5 {
-  margin: 20px 0 0 0;
-  font-weight: bolder;
 }

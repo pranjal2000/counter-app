@@ -4,9 +4,9 @@ import CounterValue from "./CounterValue";
 
 function App() {
   var initialValue = 1;
-  const maxValue = 1000;
+  var maxValue = 1000;
   const [count, setCount] = useState(initialValue);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   const updateCount = () => {
@@ -25,7 +25,7 @@ function App() {
     )
       .then((res) => {
         res.json();
-        setLoading(false);
+        // setLoading(false);
       })
       .catch((err) => console.log("error"));
   };
@@ -54,11 +54,11 @@ function App() {
       .then((res) => res.json())
       .then(
         (result) => {
-          setLoading(false);
+          // setLoading(false);
           initialValue = parseInt(result);
         },
         (error) => {
-          setLoading(false);
+          // setLoading(false);
           setError(error);
         }
       );

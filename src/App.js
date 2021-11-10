@@ -30,9 +30,19 @@ function App() {
       .catch((err) => console.log("error"));
   };
 
-  function handleChange(count) {
-    if (count <= maxValue) {
-      setCount(count);
+  function handleChange(cnt) {
+    console.log(cnt);
+    if (cnt == "" || cnt == null) {
+      setCount(0);
+      return;
+    }
+
+    cnt = parseInt(cnt);
+    if (cnt >= count && cnt <= maxValue) {
+      setCount(cnt);
+      updateCount();
+    } else if (cnt <= count && cnt >= initialValue) {
+      setCount(cnt);
       updateCount();
     }
   }
@@ -77,7 +87,7 @@ function App() {
               type="text"
               name="counter"
               value={count}
-              onChange={(e) => handleChange(parseInt(e.target.value))}
+              onChange={(e) => handleChange(e.target.value)}
             />
           </div>
 
